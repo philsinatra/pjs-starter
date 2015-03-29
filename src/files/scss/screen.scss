@@ -1,0 +1,50 @@
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/transition";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities";
+
+// @import "singularitygs";
+
+@import "susy";
+@import "breakpoint";
+
+// @import "bourbon";
+
+@import "modules/settings";
+@import "modules/mixins";
+
+@import "partials/grid";
+@import "partials/utilities";
+@import "partials/typeography";
+
+/* ::Clearfixs and extends. Use which suits best */
+/* ----------------------------------------------------------- */
+
+// Use clearfix if you need general clearfixing
+.clearfix       { @include clearfix; }
+
+// Use pie-clearfix if you need clearfixing that doesn't use overflow: hidden
+.pie-clearfix     { @include pie-clearfix; }
+
+// OTHER EXTENDS
+
+// Max width, for images etc... in RWD
+.max-width      { max-width: 100%; height: auto; }
+
+// Global Styles
+
+* { @include box-sizing(border-box); }
+
+html, body { height: 100%; }
+
+body {
+  background-color: #fff;
+  color: #000;
+  font: lighter 100%/1.4 $font-sansserif;
+  @include advancedtype;
+}
+
+img, embed, object, video {
+  @extend .max-width;
+}

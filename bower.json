@@ -1,0 +1,20 @@
+{
+  "name": "pjs-starter",
+  "version": "0.0.0",
+  "authors": [
+    "Phil Sinatra <code@philsinatra.com>"
+  ],
+  "description": "HTML/CSS Based Project Initializer",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    
+  }
+}

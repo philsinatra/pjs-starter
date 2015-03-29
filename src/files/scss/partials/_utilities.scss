@@ -1,0 +1,71 @@
+
+/* ::State styles */
+/* ------------------------------------------------------------ */
+
+.is-hidden {
+  display: none;
+}
+
+.is-shown, .is-block {
+  display: block;
+}
+
+.is-hidden-mobile {
+  display: none;
+  @include breakpoint($mamabear) {
+    display: block;
+  }
+}
+
+.is-hidden-mobile-inline {
+  display: none;
+  @include breakpoint($mamabear) {
+    display: inline;
+  }
+}
+.is-hidden-desktop {
+  @include breakpoint($mamabear) {
+    display: none;
+  }
+}
+
+.is-hidden-mamabear {
+  display: none;
+  @include breakpoint($papabear) {
+    display: block;
+  }
+}
+
+.is-hidden-papabear {
+  @include breakpoint($papabear) {
+    display: none;
+  }
+}
+
+
+.is-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.hr {
+  border-top: 1px solid $cs-gray-ultra-light;
+  height: 4em;
+  margin-top: 4em;
+}

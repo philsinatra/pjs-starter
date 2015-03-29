@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html>             <!--<![endif]-->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0" />
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/screen.css">
+  <!--[if IE]>
+    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="js/vendor/html5shiv.js"></script>
+  <script src="js/vendor/respond.min.js"></script>
+  <![endif]-->
+  <title></title>
+</head>
+<body>
+  <!-- @if NODE_ENV='prod' -->
+  <script src="js/scripts.min.js"></script>
+  <!-- @endif -->
+  <!-- @if NODE_ENV='dev' -->
+  <script src="js/scripts.js"></script>
+  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+  <!-- @endif --></body>
+</html>

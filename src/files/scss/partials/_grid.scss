@@ -1,0 +1,34 @@
+$papabear:    64em;
+$mamabear:    48em;
+$brotherbear: 35.5em;
+$sisterbear:  30em;
+$babybear:    20em;
+
+$grids: 12;
+
+// -----------------------------------------------------------------------------
+// SUSY grid system
+
+$susy: (
+  debug: (
+    image: show,
+    color: rgba(0,0,0,0.3),
+    output: overlay,
+    toggle: bottom right,
+  ),
+  global-box-sizing: border-box,
+  use-custom: (rem: true),
+  columns: 12,
+  gutters: 1/4,
+);
+
+.row {
+  @include container();
+}
+
+@include breakpoint($mamabear) {
+  .last { @include last; }
+}
+
+.clear { clear: left; }
+.overflow-auto { overflow: auto; }

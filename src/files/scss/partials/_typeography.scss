@@ -1,0 +1,114 @@
+// SET-UP CORE FONT SIZING AND RHYTHM
+
+
+// Default Sizing and spacing
+// ------------------------------------------------------------
+
+// You'll often get better results here if you work in numbers the divide into the baseline.
+// IE, if you have a baseline of 6px, multiples or divisions of often provide best results in ems
+
+h1 {
+  @include adjust-font-size-to(36px);
+  margin: 0 0 rhythm(3, 36px) 0;              // 3 lines below, based on font size
+}
+
+h2 {
+  @include adjust-font-size-to(30px);
+  margin: rhythm(4, 30px) 0 rhythm(2, 30px) 0;        // 4 lines above / 2 lines below, based on font size
+}
+
+h3 {
+  @include adjust-font-size-to(22px);
+  margin: rhythm(4, 22px) 0 rhythm(2, 22px) 0;        // 4 lines above / 2 lines below, based on font size
+}
+
+h4 {
+  @include adjust-font-size-to(20px);
+  margin: 0 0 rhythm(1, 20px) 0;              // 1 lines below, based on font size
+}
+
+h5 {
+  @include adjust-font-size-to(18px);
+  margin: 0 0 rhythm(1, 18px) 0;              // 1 lines below, based on font size
+}
+
+h6 {
+  @include adjust-font-size-to(16px);
+  margin: 0 0 rhythm(1, 16px) 0;              // 1 lines below, based on font size
+}
+
+p, pre, label {
+  @include adjust-font-size-to(16px);
+  margin: 0 0 rhythm(2, 16px) 0;              // 2 lines below, based on font size
+}
+
+ol, ul {
+  @include adjust-font-size-to(16px);
+  margin: 0 0 rhythm(4, 16px) 0;              // 4 lines below, based on font size
+}
+
+li {
+  line-height: auto;
+}
+
+// Core typography
+// ------------------------------------------------------------
+
+ul      { @include unordered; }             // Include unordered list from mixins by default
+ol      { @include ordered; }               // Include ordered list from mixins by default
+strong, b   { font-weight: 600; }
+em, i, q  { font-style: italic; }
+small { font-size: 80%; }
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
+sub, sup {
+    font-size: 0.5em;
+    line-height: 100%;
+}
+
+blockquote {
+  padding-left: em-font(16px);
+  border-left: em-font(5px) solid grey;
+  line-height: normal;
+  margin: 0;
+}
+
+hr.soften {
+  height: 1px;
+  margin: 2em 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+// Links
+// ------------------------------------------------------------
+a {
+  // @include link-colors();
+  @include fade_transition(color);
+}
+
+
+// Code
+// ------------------------------------------------------------
+code {
+  font-family:'DejaVu Sans Mono',Inconsolata,Consolas,'Lucida Console',monospace;
+  font-size: 0.75em; /* 12px */
+  line-height: 1.6667; /* 20px */
+}
+
+ol.code {
+  color: #888;
+  margin: 1.3334em 0 1.3334em 3em; /* 16px 0 16px 36px */
+  line-height: 2; /* 24px */
+}
+
+ol.code li {
+  list-style: decimal-leading-zero;
+  background: #f6f6f6;
+  margin: 0 0 -1px 0;
+  border-top: 1px solid #fff;
+  padding: 0 0.5em; /* 0 8px */
+}
